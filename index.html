@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+
+    <link rel="stylesheet" href="./styles/custom.css">
+</head>
+
+<body>
+    <div class="blurred_background"></div>
+    <div class="main">
+        <div class="quiz_box">
+            <h2 id="question">1. I am a dummy question</h2>
+            <div class="options">
+                <div class="option">
+                    <input class="optionSelector" id="option1" type="radio" value="a" name="option">
+                    <label for="option1">Option a</label>
+                </div>
+
+                <div class="option">
+                    <input class="optionSelector" id="option2" type="radio" value="b" name="option">
+                    <label for="option2">Option b</label>
+                </div>
+
+                <div class="option">
+                    <input class="optionSelector" id="option3" type="radio" value="c" name="option">
+                    <label for="option3">Option c</label>
+                </div>
+
+                <div class="option">
+                    <input class="optionSelector" id="option4" type="radio" value="d" name="option">
+                    <label for="option4">Option d</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn" onclick="submitAnswer()">
+                Submit
+            </button>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
