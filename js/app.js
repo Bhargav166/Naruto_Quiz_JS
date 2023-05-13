@@ -67,20 +67,30 @@ const nextQuestion = () => {
 
 const submitAnswer = () => {
 
-    const data = questions[ques_index];
-    const correctAns = data.ans;
+    var radios = document.querySelectorAll('input[type="radio"]:checked');
+    var value = radios.length > 0 ? radios[0].value : null;
+    console.log(value);
 
-    const answer = getAnswer();
-
-    // Checking if selected answer is correct
-    if (answer == correctAns) {
-        right++;
-    } else {
-        wrong++;
+    if (value == null) {
+        alert("Please select an option")
     }
-    ques_index++;
-    nextQuestion();
-    return;
+
+    else {
+        const data = questions[ques_index];
+        const correctAns = data.ans;
+
+        const answer = getAnswer();
+
+        // Checking if selected answer is correct
+        if (answer == correctAns) {
+            right++;
+        } else {
+            wrong++;
+        }
+        ques_index++;
+        nextQuestion();
+        return;
+    }
 }
 
 const getAnswer = () => {
@@ -93,7 +103,6 @@ const getAnswer = () => {
             }
         }
     )
-    console.log(answer);
     return answer;
 
 }
